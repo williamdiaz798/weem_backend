@@ -1,5 +1,5 @@
 const accountSid = 'AC9e7f5ae3ccda17dcb30dc6f96a46d22a'; 
-const authToken = 'AC9e7f5ae3ccda17dcb30dc6f96a46d22a';
+const authToken = 'd8ee5fed89fd6ef0cf0ac81fbd3027b1';
 const client = require('twilio')(accountSid, authToken)
 
 const pool = require('../pool')
@@ -261,7 +261,7 @@ exports.eliminarEvento = async (req, res) => {
                                     response3[0].forEach(datos =>{
                                         if(datos.telefono_usuario != ''){
                                             client.messages.create({
-                                                from: 'whatsapp:+14782422785',
+                                                from: 'whatsapp:+14155238886',
                                                 to:'whatsapp:'+datos.telefono_usuario,
                                                 body:'Estimado usuario: '+datos.nombre_usuario+', el evento: '+datos.nombre_evento+', que reservo para el dia: ' + datos.fecha_evento +' a las: ' + datos.hora_evento + ' ha sido cancelado por el administrador, pase un feliz dia.'
                                             }).then(message => console.log('sid: '+message.sid)).done()

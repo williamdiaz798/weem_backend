@@ -1,5 +1,5 @@
 const accountSid = 'AC9e7f5ae3ccda17dcb30dc6f96a46d22a'; 
-const authToken = 'AC9e7f5ae3ccda17dcb30dc6f96a46d22a';
+const authToken = 'd8ee5fed89fd6ef0cf0ac81fbd3027b1';
 const client = require('twilio')(accountSid, authToken)
 
 const pool = require('../pool')
@@ -144,7 +144,7 @@ exports.reservar = async (req, res) => {
                                                                         if(data.telefonoUsuario != ''){
                                                                             if(data.telefonoUsuario != undefined){
                                                                                 client.messages.create({
-                                                                                    from: 'whatsapp:+14782422785',
+                                                                                    from: 'whatsapp:+14155238886',
                                                                                     to:'whatsapp:'+data.telefonoUsuario,
                                                                                     body:'Estimado usuario: ' + data.nombreUsuario + ', la reserva fue realizada con exito, para el evento: '+ data.nombreEvento +', programado para el dia: '+reserva.fecha_evento+ ', a las: '+ reserva.hora_evento+', en '+reserva.direccion_evento+' y su código de entrada es: '+codigoEntrada
                                                                                 }).then(message => console.log('sid: '+message.sid)).done()
