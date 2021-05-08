@@ -91,6 +91,7 @@ exports.crearEvento = async (req, res) => {
                         idEvento = 'V1'
                     }
                 }
+                console.log('call crear_evento("'+idEvento+'","'+data.nombreEvento+'","'+data.fechaEvento+' '+data.horaEvento+'","'+data.direccionEvento+'", '+data.coordenada_x+', '+data.coordenada_y+' , '+data.entradasTotalesEvento+', 0, 0, '+data.entradasPrecioEvento+', '+data.tipoEvento+', "'+data.nombreusuario+'")')
                 pool.query('call crear_evento("'+idEvento+'","'+data.nombreEvento+'","'+data.fechaEvento+' '+data.horaEvento+'","'+data.direccionEvento+'", '+data.coordenada_x+', '+data.coordenada_y+' , '+data.entradasTotalesEvento+', 0, 0, '+data.entradasPrecioEvento+', '+data.tipoEvento+', "'+data.nombreusuario+'")',(err2, response2) =>{
                     console.log('call crear_evento("'+idEvento+'","'+data.nombreEvento+'","'+data.fechaEvento+' '+data.horaEvento+'","'+data.direccionEvento+'", '+data.coordenada_x+', '+data.coordenada_y+' , '+data.entradasTotalesEvento+', 0, 0, '+data.entradasPrecioEvento+', '+data.tipoEvento+', "'+data.nombreusuario+'")')
                     if(err2) {
