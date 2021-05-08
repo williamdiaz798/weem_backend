@@ -144,7 +144,7 @@ exports.reservar = async (req, res) => {
                                                                         if(data.telefonoUsuario != ''){
                                                                             if(data.telefonoUsuario != undefined){
                                                                                 client.messages.create({
-                                                                                    from: 'whatsapp:+14155238886',
+                                                                                    from: 'whatsapp:+14782422785',
                                                                                     to:'whatsapp:'+data.telefonoUsuario,
                                                                                     body:'Estimado usuario: ' + data.nombreUsuario + ', la reserva fue realizada con exito, para el evento: '+ data.nombreEvento +', programado para el dia: '+reserva.fecha_evento+ ', a las: '+ reserva.hora_evento+', en '+reserva.direccion_evento+' y su código de entrada es: '+codigoEntrada
                                                                                 }).then(message => console.log('sid: '+message.sid)).done()

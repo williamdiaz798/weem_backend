@@ -261,7 +261,7 @@ exports.eliminarEvento = async (req, res) => {
                                     response3[0].forEach(datos =>{
                                         if(datos.telefono_usuario != ''){
                                             client.messages.create({
-                                                from: 'whatsapp:+14155238886',
+                                                from: 'whatsapp:+14782422785',
                                                 to:'whatsapp:'+datos.telefono_usuario,
                                                 body:'Estimado usuario: '+datos.nombre_usuario+', el evento: '+datos.nombre_evento+', que reservo para el dia: ' + datos.fecha_evento +' a las: ' + datos.hora_evento + ' ha sido cancelado por el administrador, pase un feliz dia.'
                                             }).then(message => console.log('sid: '+message.sid)).done()
